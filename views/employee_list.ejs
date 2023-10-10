@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/css/employee_list.css">
+<%- include('header'); %>
+<div id = employees>
+    <ul id = "employee_list">
+        <li id = "list-heading">
+            <div >Name </div>
+            <div > Email </div>
+            <div> Password </div>
+            <div > Is Admin </div>
+            <div > Remove </div>
+        </li>
+        
+
+        <% for(employee of allEmployee) { %>
+            <li id="<%= employee.id %>"  class = "employee_item">
+                <div  class = 'emp_name'>
+                    <form action="/review/update-name" method="post">
+                        <input type="hidden" value="<%= employee.id%>" name="employee_id" id="employee_id">
+                        <input type="text" name="name" placeholder="Employee Name"  value = " <%= employee.name %>" required>  
+                        <button type="submit">Update</button>
+                    </form>
+                </div>
+                <div  class = 'emp_mail'> <%= employee.email %> </div>
+                <div class = "emp_pass"> <%= employee.password %> </div>
+                <div  class = 'emp_isAdmin'>
+                    <% if (employee.isAdmin) { %>
+                        <span >Admin</span>                      
+                    <% } else{ %>
+                        <span >Not Admin</span>
+                    <% } %>
+                </div>
+                <div class = "delete"> <span> Delete </span>  </div>
+            </li>
+        <% } %>
+    </ul>
+</div>
+    
+
+<script type = "text/javascript" src="/js/employee_list.js"></script>

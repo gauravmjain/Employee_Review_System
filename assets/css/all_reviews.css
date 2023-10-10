@@ -1,0 +1,32 @@
+#all-reviews {
+  position: absolute;
+  bottom: 0%;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  #all-reviews ul {
+    width: 70%;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: #950101;
+    list-style: none;
+    overflow-y: auto;
+    padding: 0; }
+    #all-reviews ul h1 {
+      text-align: center;
+      background-color: #950101;
+      margin: 0;
+      padding: 15px 0px; }
+    #all-reviews ul li {
+      padding: 5px;
+      padding-left: 15px;
+      background-color: #2f0909;
+      margin-bottom: 9px;
+      overflow-wrap: break-word; }
+      #all-reviews ul li p {
+        font-size: large;
+        font-weight: 600; }
+        #all-reviews ul li p span {
+          font-size: medium;
+          font-weight: 300; }

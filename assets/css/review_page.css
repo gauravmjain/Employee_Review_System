@@ -1,0 +1,56 @@
+#review_page {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
+  #review_page .review-containers {
+    width: 40%;
+    min-height: 200px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    height: 500px;
+    overflow: auto; }
+    #review_page .review-containers > h3 {
+      background-color: #a0000b;
+      margin: 0px;
+      padding: 15px 0px; }
+    #review_page .review-containers ul {
+      list-style: none;
+      padding: 0; }
+      #review_page .review-containers ul li {
+        background-color: #ececfc;
+        color: black;
+        margin-bottom: 8px;
+        height: auto;
+        text-align: start;
+        overflow-wrap: break-word;
+        padding: 10px; }
+        #review_page .review-containers ul li h3 span {
+          color: #890051; }
+        #review_page .review-containers ul li textarea {
+          padding: 10px;
+          max-width: 90%;
+          min-width: 90%;
+          min-height: 40px;
+          margin-bottom: 5px; }
+        #review_page .review-containers ul li button {
+          width: 70px;
+          height: 30px;
+          border-radius: 10px;
+          background-color: black;
+          color: whitesmoke;
+          position: relative;
+          left: calc(50% - 35px); }
+        #review_page .review-containers ul li button:hover {
+          cursor: pointer;
+          background-color: whitesmoke;
+          color: black; }
+  #review_page #my-review-list li h3 span {
+    font-weight: 300;
+    color: #890051; }
+  #review_page #my-review-list li p {
+    font-weight: 600;
+    font-size: larger; }
+    #review_page #my-review-list li p span {
+      font-size: medium;
+      font-weight: 300;
+      color: #890051; }

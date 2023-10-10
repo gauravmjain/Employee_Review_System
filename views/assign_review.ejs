@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/css/assign_review.css">
+<%- include('header'); %>
+<div id = "assign_form">
+    <form action="/review/assign-review" method="post">
+        <h1> Assign Employee to Reviewed </h1>
+        <select name="reviewer" id="" >
+            <option value="reviewer" selected disabled> Add Reviewer </option>
+            <% for (emp of allEmployee) { %>
+                <option value="<%= emp.id %>"> <%= emp.name %> </option>
+            <% } %>
+        </select>
+        <select name="revievee" id="">
+            <option value="reviewee" selected disabled> Reviewing To </option> 
+            <% for (emp of allEmployee) { %>
+                <option value="<%= emp.id %>"> <%= emp.name %> </option>
+            <% } %>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</div>

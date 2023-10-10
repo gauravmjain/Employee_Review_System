@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/review_page.css">
+<%- include('header'); %>
+<h1></h1>
+<div id = "review_page">
+   <div id = "to-review" class = "review-containers">
+        <h3>Review Employee</h3>
+          <div id = "review-list">
+               <ul>
+                    <% for(emp of toReview) {%>
+                         <li id = "<%= emp.id%>" class = "emp-list-item">
+                              <h3> Review To : <span> <%= emp.name %> </span> </h3>
+                              <form action="/review/send-review" method="post">
+                                   <input type="hidden" name="reviewee" value="<%= emp.id%>">
+                                   <input type="hidden" name="reviewer" value="<%= user.id%>">
+                                   <textarea name="review" id="review" cols="10" rows="5"></textarea>
+                                   <button type="submit"> Submit </button>
+                              </form>
+                         </li>
+                    <%} %>
+               </ul>
+               
+          </div>
+   </div>
+   
+   <div id ="my-review" class = "review-containers">
+        <h3>My Reviews</h3>
+        <div id="my-review-list">
+          <ul>
+               <% if(myReviews){ %>
+                    <% for(rev of myReviews) { %>
+                         <li id = "<%= rev.id %>">
+                              <h3>From  :  <span>  <%= rev.reviewer.name %> </span></h3>
+                              <p>Review : <span><%= rev.review%></span>  </p>
+                         </li> 
+                    <%  } %>
+               <% } %>
+               
+          </ul>
+        </div>
+   </div>
+</div>

@@ -1,0 +1,81 @@
+#review_page{
+    width:  100%;
+    display: flex;
+    justify-content: space-around;
+    .review-containers{
+        width:  40%;
+        min-height: 200px;
+        border: 1px solid #ffffff;
+        text-align: center;
+        height: 500px;
+        overflow: auto;
+        >h3{
+            background-color: #a0000b;
+            margin: 0px;
+            padding: 15px 0px ;   
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            li{
+                background-color: rgb(236, 236, 252);
+                color: black;
+                margin-bottom: 8px;
+                height: auto;
+                text-align: start;
+                overflow-wrap: break-word;
+                padding: 10px;
+                h3{
+                    span{
+                        color: #890051;
+                    }
+                }
+                textarea{
+                    padding: 10px;
+                    max-width:  90%;
+                    min-width: 90%;
+                    min-height: 40px;
+                    margin-bottom: 5px;
+                }
+                button{
+                    width: 70px;
+                    height: 30px;
+                    border-radius: 10px;
+                    background-color: black;
+                    color: whitesmoke;
+                    position: relative;
+                    left: calc(50% - 35px);
+                }
+                button:hover{
+                    cursor: pointer;
+                    background-color: whitesmoke;
+                    color: black;                    
+                }
+
+            }
+            
+
+        }
+        
+
+    }
+    #my-review-list{
+        li{
+            h3{
+                span{
+                    font-weight: 300;
+                    color: #890051;
+                }
+            }
+            p{
+                font-weight: 600;
+                font-size: larger;
+                span{
+                    font-size: medium;
+                    font-weight: 300;
+                    color: #890051;
+                }
+            }
+        }
+    }
+}

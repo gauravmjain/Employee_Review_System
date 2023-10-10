@@ -1,0 +1,41 @@
+#employees {
+  position: absolute;
+  bottom: 0%;
+  height: 90%;
+  width: 100%; }
+  #employees ul {
+    list-style-type: none;
+    padding-left: 0%;
+    border: 2px solid white; }
+    #employees ul li {
+      background-color: #571d0a;
+      border: 0.5px solid white;
+      padding: 5px;
+      height: 50px;
+      display: flex;
+      justify-content: space-around;
+      text-align: center; }
+      #employees ul li div {
+        width: calc(100% / 5);
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      #employees ul li div:not(div:last-child) {
+        border-right: 0.5px solid white; }
+      #employees ul li .emp_name button {
+        background-color: snow;
+        color: black;
+        border: none;
+        border-radius: 5px; }
+      #employees ul li .emp_name button:hover {
+        color: #990000;
+        background-color: #b8d7ff;
+        cursor: pointer; }
+      #employees ul li .emp_isAdmin span:hover {
+        cursor: pointer; }
+      #employees ul li .delete span:hover {
+        cursor: pointer; }
+    #employees ul #list-heading {
+      font-size: large;
+      font-weight: 600;
+      border: 2px solid black; }

@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/css/header.css">
+<div id = 'header'>
+    <div >
+       <a  id = "logo" href="/users/review-page"> Employee Review </a> 
+    </div>  
+    
+    <span>
+        <% if(user.isAdmin){ %>
+            <a href="/review/performance"> Assign Reviews </a>&nbsp;
+            <a href="/review/employees-list">  Employees </a> &nbsp;
+            <a href="/review/all-reviews">  All Reviews </a> &nbsp;
+        <% } %>
+        
+        <a href="/users/sign-out">Sign Out</a>  
+        &nbsp;
+        <span><%= user.name %> </span>
+    </span>
+</div>
+
+<script src="/js/header.js"></script>

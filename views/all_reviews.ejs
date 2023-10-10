@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/css/all_reviews.css">
+<%- include('header'); %>
+<div id = "all-reviews">
+    <ul>
+        <h1>All Employee Reviews</h1>
+        <% for(let rev of allReviews) { %>
+                <li id = "<%= rev.id %>">
+                    <p> Reviewer Name : <span><%= rev.reviewer.name %></span>  </p>
+                    <p> Reviewee Name : <span><%= rev.reviewee.name %></span> </p>
+                    <p> Review of Employee : <span><%= rev.review %> </span></p>
+                </li>
+        <% } %>
+    </ul>
+</div>
